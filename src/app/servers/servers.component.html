@@ -14,3 +14,8 @@
 <!-- <input type="text" class="form-control" [(ngModel)]="userName">
 <p>{{ userName }}</p>
 <button class="btn btn-danger" [disabled]="!userName" (click)="userName = ''">Submit</button> -->
+
+
+<button class="btn btn-primary" (click)="tunaCreate()">Display Details</button>
+<p *ngIf="tunaToggle">Secret Password = Tuna</p>
+<p *ngFor="let item of log"> no: {{ item }} </p>

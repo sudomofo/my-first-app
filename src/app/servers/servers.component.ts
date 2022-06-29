@@ -15,6 +15,8 @@ export class ServersComponent implements OnInit {
   serverName = 'test server';
   servers = ['Testserver', 'Testserver 2'];
   // userName = '';
+  tunaToggle = false;
+  log = [];
   constructor() { 
     setTimeout(() => {
       this.allowNewServer = true;
@@ -30,5 +32,9 @@ export class ServersComponent implements OnInit {
   }
   onUpdateServer(event: Event) {
     this.serverName = (<HTMLInputElement>event.target).value;
+  }
+  tunaCreate() {
+    this.tunaToggle = !this.tunaToggle;
+    this.log.push(this.log.length + 1 + ' ' + new Date());
   }
 }

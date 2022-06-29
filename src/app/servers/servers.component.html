@@ -18,4 +18,4 @@
 
 <button class="btn btn-primary" (click)="tunaCreate()">Display Details</button>
 <p *ngIf="tunaToggle">Secret Password = Tuna</p>
-<p *ngFor="let item of log"> no: {{ item }} </p>
+<p *ngFor="let item of log; let i = index"> index: {{ i }} no: {{ item }} </p>
